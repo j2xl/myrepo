@@ -1,9 +1,13 @@
+package homework;
+
+import java.lang.String;
+
 /**
  * Given a string, reverses the string and prints the reverse.
  * For example, "Hello" becomes "olleH".
+ *
+ * @author jason@weill.org (Jason Weill)
  */
-import java.lang.String;
-
 class ReverseString {
     public static void main(String[] args) {
         try {
@@ -21,7 +25,7 @@ class ReverseString {
      * @param s The string to be reversed.
      * @return  The string with characters reversed.
      */
-    private static String reverseString(String s) {
+    public static String reverseString(String s) {
         // If we are working on a null string, we don't need to do anything.
         if (s == null) {
             return s; // Reversing null is null

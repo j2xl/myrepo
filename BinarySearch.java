@@ -4,30 +4,21 @@ import java.lang.Float;
 class BinarySearch {
     public static void main(String[] args) {
         try {
-            ArrayList<Float> a = new ArrayList<Float>();
-            a.add(new Float(1.1f));
-            a.add(new Float(2.1f));
-            a.add(new Float(3.1f));
-            a.add(new Float(4.1f));
-            a.add(new Float(5.1f));
-            a.add(new Float(6.1f));
-            a.add(new Float(7.1f));
-
-            ArrayList<Float> toCheck = new ArrayList<Float>(a);
-            // Negative test cases
-            toCheck.add(new Float(0.5f));
-            toCheck.add(new Float(2.0f));
-            toCheck.add(new Float(1.5f));
-            toCheck.add(new Float(6.5f));
-            toCheck.add(new Float(7.5f));
-
-            for (Float f : toCheck) {
-                if (search(a, f)) {
-                    System.out.println(f + " is in the list.");
-                }
-                else {
-                    System.out.println(f + " is not in the list.");
-                }
+            ArrayList<Float> sortedList = new ArrayList<Float>();
+            String[] rawList = args[0].split(",");
+            for (String rawItem : rawList) {
+                sortedList.add(Float.parseFloat(rawItem));
+            }
+            Float target = Float.parseFloat(args[1]);
+            if(listContainsItem(sortedList, target)) {
+                System.out.println(
+                    "Found " + target + " in list " + args[0]
+                );
+            }
+            else {
+                System.out.println(
+                    "Did not find " + target + " in list " + args[0]
+                );
             }
         }
         catch (ArrayIndexOutOfBoundsException e) {
@@ -46,7 +37,10 @@ class BinarySearch {
      * @param target     Single integer to look for
      * @return           True if target is in sortedList; false otherwise
      */
-    public static boolean search(ArrayList<Float> sortedList, Float target) {
+    public static boolean listContainsItem(
+        ArrayList<Float> sortedList, 
+        Float target
+    ) {
         // Sanity check: if the sortedList is null or empty, assume the worst
         if (sortedList == null || sortedList.size() == 0) {
             return false;
