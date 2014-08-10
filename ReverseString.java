@@ -8,7 +8,7 @@ import java.lang.String;
  *
  * @author jason@weill.org (Jason Weill)
  */
-class ReverseString {
+public class ReverseString {
     public static void main(String[] args) {
         try {
             System.out.println(reverseString(args[0]));

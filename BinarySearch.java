@@ -1,7 +1,9 @@
+package homework;
+
 import java.util.ArrayList;
 import java.lang.Float;
 
-class BinarySearch {
+public class BinarySearch {
     public static void main(String[] args) {
         try {
             ArrayList<Float> sortedList = new ArrayList<Float>();
