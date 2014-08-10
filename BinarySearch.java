@@ -3,6 +3,11 @@ package homework;
 import java.util.ArrayList;
 import java.lang.Float;
 
+/**
+ * Performs binary search on a sorted array of floating-point numbers.
+ *
+ * @author jason@weill.org (Jason Weill)
+ */
 public class BinarySearch {
     public static void main(String[] args) {
         try {
