@@ -35,6 +35,10 @@ public class BinarySearch {
      * floating-point number, returns whether the single number is present in 
      * the array.
      *
+     * Assumptions:
+     *  - The array will be sorted in ascending order.
+     *  - All elements in the array are defined (non-null).
+     *
      * @param sortedList Ascending-order sorted list of floating-point numbers
      * @param target     Single integer to look for
      * @return           True if target is in sortedList; false otherwise
@@ -43,8 +47,9 @@ public class BinarySearch {
         ArrayList<Float> sortedList, 
         Float target
     ) {
-        // Sanity check: if the sortedList is null or empty, assume the worst
-        if (sortedList == null || sortedList.size() == 0) {
+        // Sanity check: if the sortedList is null or empty, or if the 
+        // target is null, fail the search
+        if (sortedList == null || sortedList.size() == 0 || target == null) {
             return false;
         }
 
