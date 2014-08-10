@@ -11,7 +11,7 @@ import java.lang.String;
 public class ReverseString {
     public static void main(String[] args) {
         try {
-            System.out.println(reverseString(args[0]));
+            System.out.println(reverse(args[0]));
         }
         catch (ArrayIndexOutOfBoundsException e) {
             System.err.println("Pass a single parameter: a string to reverse.");
@@ -25,7 +25,7 @@ public class ReverseString {
      * @param s The string to be reversed.
      * @return  The string with characters reversed.
      */
-    public static String reverseString(String s) {
+    public static String reverse(String s) {
         // If we are working on a null string, we don't need to do anything.
         if (s == null) {
             return s; // Reversing null is null
