@@ -1,12 +1,10 @@
 package homework;
 
-import static org.junit.Assert.assertEquals;
-
 import homework.ReverseString;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import static org.hamcrest.CoreMatchers.equalTo;
+import org.junit.Assert;
 
 /**
  * Tests for {@Link ReverseString}.

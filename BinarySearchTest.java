@@ -3,8 +3,6 @@ package homework;
 import java.util.ArrayList;
 import java.lang.Float;
 
-import static org.junit.Assert.assertEquals;
-
 import homework.BinarySearch;
 import org.junit.Test;
 import org.junit.runner.RunWith;
